@@ -15,6 +15,8 @@
 - OpenStack - Good support out of the box
 
 ## Install
+> The instructions are taken from: https://ubuntu.com/blog/kvm-hyphervisor
+> So they might be different for other Linux distros.
 ### Packages
 ```bash
 $ sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm
