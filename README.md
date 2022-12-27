@@ -38,7 +38,48 @@ VMs (Virtual Machines) quickstarts!
         - ParaVirtualization: No need for hardware virtualization. Special API is offered to modify the guest OS. The OS needs to be modifiable so the Source Code needs to be accessible for this type. This tech was introduce by Xen Project team. Also useful because you won't need to virtualize an extensions on the host CPU. Also useful for hardware that does not support hardware-assisted virtualization.
 
 ## Virtualization and Security
-- 
+- Isolate the VM from the Host
+- Virtualization adds additional layers of complexity and therefore monitoring and finding security vulnerabilities becomes more difficult (means also that a hacker has more work to do to understand the environment)
+- A virtualized network is isolated from other virtual networks and physical networks
+    - For this to work the isolation cannot require firewall, ACLs and...
+- Traffic in between hypervisors are encapsulated and the physical network operates in a different address space
+    - Example of it is that networks can be IPv6 and virtual networks can be IPv4 or vice versa
+- Network Segmentation: split a computer network into subnetworks and make each of them a network segment (implemented by a hypervisor switch or OpenvSwitch)
+    - Better performance
+    - Better security
+        - Segmentation provides a good control for limit access to the network
+
+> Security can be broken by bad configurations.
+>
+> Example: a bunch of open ports!
+
+### Sandbox
+- Examples: 
+    - SELinux
+    - Apparmor
+    - Virtual machine
+    - JVM
+    - Features in browser like Chromium
+    - Sandboxie
+        - Developed by the Invincea Windows OS
+        - It allows users to run and install applications without modifying your drive
+    - http://www.sandboxie.com/
+    - Linux version: https://pdos.csail.mit.edu/archive/mbox/
+
+> Over time hackers have found ways arround sandboxing.
+>
+> Example: [Paranoid Fish](https://github.com/a0rtega/pafish)
+
+### Containers vs Virtualization
+Mostly about containers.
+- Also known as: Operating-system-level virtualization
+- It's been around for a a while but Docker, Vagrantup and LXC have made it more pop
+
+Little history on Docker: 
+> *In 2004, Docker teamed up with companies like Canonical, Google, Red Hat and Parallels to create a standard that allows containers to work within Linux namespaces and control groups without any admin access and offer a better interface for all Linux Distro. This allows many containers to run in a single VM.*
+
+
 
 ## Resources
+- [1 - Chapter | HelloXenProject | Book | Wiki | Xen Project](https://wiki.xenproject.org/wiki/Book/HelloXenProject/1-Chapter)
 - [XCP-NG vs Xen vs XenServer vs KVM vs Proxmox | YouTube](https://www.youtube.com/watch?v=yulfCYmliX8)
