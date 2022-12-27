@@ -9,7 +9,8 @@
     - As a true hypervisor type-1 you boot your hardware on Xen. Xen is similar to a micro-kernel (benefits: the attack surface is **REALLY** low!)
     - Since there is not that much code you can read it and understand it. Great way to learn what a hypervisor is and how it works and mover foward to improving it
     - You can contribute to it easily compared to KVM/Linux because the contributions are more trusted from Google, IBM and the like
-- 
+- Critix and Vates invest a lot into Xen
+- Proxmox vs XCP-ng - 
 
 ## Resources
 
