@@ -78,7 +78,33 @@ Mostly about containers.
 Little history on Docker: 
 > *In 2004, Docker teamed up with companies like Canonical, Google, Red Hat and Parallels to create a standard that allows containers to work within Linux namespaces and control groups without any admin access and offer a better interface for all Linux Distro. This allows many containers to run in a single VM.*
 
+Advantages: 
+- Containers don't need some much overhead because the containers share the OS Kernel
+- It makes applications running in containers more portable since you transfer an image of your container with the application so no issues with missmatching libraries or something
+- Containers start faster than VMs
 
+Disavantages: 
+- Security is not as good compared to a VM because it shares Kernel hooks
+- If Kernel vern. exists than it easy for a hacker to hack into the host system and other containers
+
+Tool to test security of containers: https://github.com/coreos/clair
+
+Other resources: 
+- http://www.cvedetails.com/product/28125/Docker-Docker.html?vendor_id=13534
+- https://www.blackhat.com/docs/eu-15/materials/eu-15-Bettini-Vulnerability-Exploitation-In-Docker-Container-Environments-wp.pdf
+
+Five security concerns with Docker: 
+1. Kernel exploits
+2. Denial-of-service attacks
+3. Container breakouts
+4. Poisoned images
+5. Compromising secrets
+
+> Also to note that SELinux is very useful for the security of containers. When you let the container access a volume on your system it can then travel trough the rest of the system especially if it is running as root. So use SELinux for better access control and security.
+
+### Linux Virtualization
+#### Xen
+- 
 
 ## Resources
 - [1 - Chapter | HelloXenProject | Book | Wiki | Xen Project](https://wiki.xenproject.org/wiki/Book/HelloXenProject/1-Chapter)
