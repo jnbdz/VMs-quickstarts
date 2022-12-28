@@ -108,8 +108,57 @@ Five security concerns with Docker:
 > Also to note that SELinux is very useful for the security of containers. When you let the container access a volume on your system it can then travel trough the rest of the system especially if it is running as root. So use SELinux for better access control and security.
 
 ### Linux Virtualization
+> Performance benchmarks: https://major.io/2014/06/22/performance-benchmarks-kvm-vs-xen/
 #### Xen
-- 
+- Xen Project manages hardware for all Virtual Machines and the most privileged domain
+- Domains == VMs in Xen
+- Privileged domain as dom0
+- dom0 is the only one that has direct access to the hardware
+- dom0 can be Linux or BSD
+- The domains any OS like Linux, BSD, Microsoft Windows, etc
+- Xen dom0 and domU have support in the Linux Kernel since version 3.0
+- Live migration are supported
+- Sload balancing that prevents downtime, is also supported
+- Here are the fives types of vistualization that Xen supports: 
+    - HVM
+    - HVM with PV drivers
+    - PVHVM
+    - PVH
+    - Paravirtualization
+
+#### KVM
+- Kernel-based Virtual Machine
+- Turns the kernel into a hypervisor
+- It needs a CPU that supports hardware virtualization (e.g.: Intel VT-x or AMD-V)
+- Linux Kernel acts as a hosted hypervisor (Type 2 Hypervisor)
+- Virtual Machine manager that is installed as a software on an existing OS
+- KVM creates a VM and coordinates hardware equipment via the host OS for the VM
+- It supports many OSs: Microsoft Windows, Linux, Mac OS X
+- Modified version of QEMU can run Mac OS X
+- No emulation
+- Uses `/dev/kvm` interface that a is a userspace for:
+    - Setup address space for guest VM
+    - Creating a Virtual Machine
+    - Reading and writing VCPU registers
+    - Inject and interrupt into a VCPU
+    - Running a VCPU
+- For BIOS it uses: SeaBIOS
+- SeaBIOS: 16-bit x86 BIOS that support standard BIOS features
+- Benfits: 
+    - **security**: Compatibale with SELinux (Mandatory Access Control security between virtual machines)
+    - **QoS**: Administrator can define thresholds for CPU, Memory and better guarantee QoS for VMs
+    - **Open Source**
+    - Full virtualization and near-native performance
+- Disadvantage: 
+    - Complex Networking
+    - Limited Processors
+    - CPU Virtualization Support
+
+**KVM Architecture:** 
+![KVM Architecture](assets/HelloXenProject-1-6.gif)
+
+#### OpenVZ
+
 
 ## Resources
 - [1 - Chapter | HelloXenProject | Book | Wiki | Xen Project](https://wiki.xenproject.org/wiki/Book/HelloXenProject/1-Chapter)
