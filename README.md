@@ -9,8 +9,11 @@ VMs (Virtual Machines) quickstarts!
 - 1972 - CP-40 was the replacement for CP-67 in that year it became an IBM product as hypervisor (UNIX is an example of virtualization at the end user level it will give you a good step towards application virtualization).
 - 1990 - Sun Microsystems started a project called "Stealth". For better writting and running a applications
 - 1995 - It was renamed to Java is able to run on many types of computers OSs and with a rich set of applications. Java let devs write code that could run on multiple OSs. All you need is to run the JRE to have your Java run. JRE contains many things like Java Virtual Machine. All Java apps run in the JVM. The JVM can be considered a small OS. For more details: https://en.wikipedia.org/wiki/Timeline_of_Virtualization_development%E2%80%9D
+- 2003 - Ian Pratt co-founded XenSource and the first version of Xen was release (based on a research project from Ian Pratt and Simon Crosby at University of Cambridge)
 - 2005-2006 - Intel and AMD introduced limited hardware virtualization with Intel (VT-x) and AMD (AMD-V)
-- 
+- 2007 - Citrix bought XenSource, Inc
+- 2008 - RedHat acquired KVM
+- 2013 - Xen project moved to the auspices of the Linux Foundation and “Xen” changed to “Xen Project” (now Amazon, AMD, Cisco, Citrix, Intel, Oracle and more support the Project)
 
 ## What is virtualization? And why?
 - Instead of leaving a lot of hardware unused and let it go to waste you can use virtualization
