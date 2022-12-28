@@ -158,7 +158,18 @@ Five security concerns with Docker:
 ![KVM Architecture](assets/HelloXenProject-1-6.gif)
 
 #### OpenVZ
-
+- Open Virtuozzo
+- Operating system-level virtualization in Linux
+- Run multiple isolated OSes on a server
+- Similar to container like LXC
+- Cannot prepare full virtualization like Xen
+- Can **only run** Linux
+- OpenVZ shares the same architecture and Kernel version
+- OpenVZ Virtual Machines are jailed containers and are not true VMs
+- In the past the file system was isolated with *chroot* but now it has its own FS
+- Advantage: Memory allocation is soft (means the memory cannot be used by others)
+- OpenVZ is often called virtual private servers (VPSs)
+- 
 
 ## Resources
 - [1 - Chapter | HelloXenProject | Book | Wiki | Xen Project](https://wiki.xenproject.org/wiki/Book/HelloXenProject/1-Chapter)
