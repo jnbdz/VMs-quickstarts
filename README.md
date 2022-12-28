@@ -1,4 +1,4 @@
-<img src="assets/Hardware_Virtualization_(copy).svg" alt="Hardware Virtualization" style="width: 450px;" align="right">
+<img src="assets/Hardware_Virtualization.svg" alt="Hardware Virtualization" style="width: 450px;" align="right">
 
 # VMs-quickstarts
 VMs (Virtual Machines) quickstarts!
