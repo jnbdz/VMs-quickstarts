@@ -154,7 +154,7 @@ Five security concerns with Docker:
     - Limited Processors
     - CPU Virtualization Support
 
-**KVM Architecture:** 
+##### KVM Architecture:
 ![KVM Architecture](assets/HelloXenProject-1-6.gif)
 
 #### OpenVZ
