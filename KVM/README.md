@@ -1,3 +1,5 @@
+<img src="assets/Kvmbanner-logo2_1.png" alt="KVM logo" style="width: 450px;" align="right">
+
 # KVM | VMs Quickstarts
 - Kernel-based Virtual Machine
 - KVM can only be used on a processor with hardware virtualisation extensions, such as [Intel-VT](https://www.intel.com/content/www/us/en/virtualization/virtualization-technology/intel-virtualization-technology.html) or [AMD-V](https://www.amd.com/en/technologies/virtualization-solutions).
