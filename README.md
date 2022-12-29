@@ -174,3 +174,4 @@ Five security concerns with Docker:
 ## Resources
 - [1 - Chapter | HelloXenProject | Book | Wiki | Xen Project](https://wiki.xenproject.org/wiki/Book/HelloXenProject/1-Chapter)
 - [XCP-NG vs Xen vs XenServer vs KVM vs Proxmox | YouTube](https://www.youtube.com/watch?v=yulfCYmliX8)
+- [How to create your own virtual machine | codeproject](https://www.codeproject.com/Articles/43176/How-to-create-your-own-virtual-machine)
