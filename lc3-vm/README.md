@@ -6,3 +6,4 @@
 - [lc3-vm Golang | GitHub](https://github.com/topics/lc3?l=go)
 - [lc3-vm Rust | GitHub](https://github.com/topics/lc3?l=rust)
 - [lc3-vm Python | GitHub](https://github.com/topics/lc3?l=python)
+- [Lets build an lc-3 virtual machines | Rodrigo Araujo](https://www.rodrigoaraujo.me/posts/lets-build-an-lc-3-virtual-machine/)
