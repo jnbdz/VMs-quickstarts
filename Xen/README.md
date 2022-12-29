@@ -12,5 +12,48 @@
 - Critix and Vates invest a lot into Xen
 - Proxmox vs XCP-ng - 
 
+- Xen project is [type-1 hypervisor](http://en.wikipedia.org/wiki/Hypervisor)
+- Multiple instances of an OS (other types in parallel) can be run at the same time
+- Used for: 
+    - server virtualization
+    - Infrastructure as a Service (IaaS)
+    - desktop virtualization
+    - security applications
+    - embedded
+    - hardware appliances
+- OS agnostic 
+
+### Key features
+- Footprint and interface are small (~1MB in size) - Microkernel design (reason why it is small)
+- OS agnostic - dom0 is normaly Linux but it can also be NetBSD or OpenSolaris
+- Driver Isolation - In the event that a driver crashes or is compromised it will only happen in the VM that uses it so that the other VMs are not affected
+- Paravirtualization - Fully paravirtualized guests have been optimized to run as a virtual machine. This means that the guests will run faster than with hardware extensions (HVM). It also means that it can run on hardware that doesn't support virtualization extensions.
+
+## Xen Project Architecture
+![](assets/Xen_Arch_Diagram_v2.png)
+- Xen Project runs directly on the hardware
+- Responsible for handling: 
+    - CPU
+    - Memory
+    - timers
+    - interrupts
+- It runs just after the bootloader before anything else
+- VMs run on top of the hypervisor
+- A VM instance is called: 
+    - domain
+    - guest
+- domain 0 (dom0) contains: 
+    - drivers for all the devices in the system
+    - control stack
+    - other system services to manage a Xen based system
+
+> It is possible to break from this "*normal*" setup.
+>
+> Throught [Dom0 Disaggregation](https://wiki.xenproject.org/wiki/Dom0_Disaggregation) it is possible to run **some** of these services/drivers in a seperate VM.
+
+- Hypervisor itself has no knowledge of I/O functions such as networking and storage 
+
 ## Resources
 
+## Credits
+- https://wiki.xenproject.org/wiki/File:Xen_Arch_Diagram_v2.png
