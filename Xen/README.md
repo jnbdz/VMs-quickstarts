@@ -1,3 +1,5 @@
+<img src="assets/xen_project_logo_dualcolor_500x208.png" alt="Xen Project logo" style="width: 450px;" align="right">
+
 # Xen | VMs QuickStarts
 - Xen != Xenserver - The XenServer is now called Critix Hypervisor and is a commericla version from Critix
 - Xen is backed by the Linux Foundation
