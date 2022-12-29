@@ -52,6 +52,22 @@
 > Throught [Dom0 Disaggregation](https://wiki.xenproject.org/wiki/Dom0_Disaggregation) it is possible to run **some** of these services/drivers in a seperate VM.
 
 - Hypervisor itself has no knowledge of I/O functions such as networking and storage 
+- Guest Domains/VMs (they are also called unprivileged domain (or DomU)) have no privilege to access hardware or I/O functionality
+- dom0 has special privileges: 
+    - access the hardware directly
+    - handles all access to the system’s I/O functions
+    - interacts with the other Virtual Machines
+- dom0 is needed for Xen Project hypervisor to work
+- dom0 is the first VM to be started
+- dom0 functions: 
+    - **System Services**: 
+        - [XenStore](https://wiki.xenproject.org/wiki/XenStore) - helps manage settings
+        - [XenBus](https://wiki.xenproject.org/wiki/XenBus) (XS) - helps manage settings
+        - Toolstack (TS) exposing a user interface to a Xen based system
+        - Device Emulation (DE) - Based on [QEMU](https://wiki.xenproject.org/wiki/QEMU_Upstream) (Xen based systems)
+    - **Native Device Drivers** - 
+    - **Virtual Device Drivers** - 
+    - **Toolstack** - 
 
 ## Resources
 
