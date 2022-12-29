@@ -1,2 +1,0 @@
-# LXD | VMs Quickstarts
-
