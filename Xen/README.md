@@ -67,9 +67,30 @@
         - [XenBus](https://wiki.xenproject.org/wiki/XenBus) (XS) - helps manage settings
         - Toolstack (TS) exposing a user interface to a Xen based system
         - Device Emulation (DE) - Based on [QEMU](https://wiki.xenproject.org/wiki/QEMU_Upstream) (Xen based systems)
-    - **Native Device Drivers** - 
-    - **Virtual Device Drivers** - 
-    - **Toolstack** - 
+    - **Native Device Drivers** - Dom0 is the source of physical device drivers and thus native hardware support for a Xen system
+    - **Virtual Device Drivers** - Dom0 contains virtual device drivers (also called backends)
+    - **Toolstack**: 
+        - Manage VMs: Creation, Destruction, Configuration
+        - Interface for: CLI, GUI, cloud orchestration stack such as OpenStack or CloudStack
+- Xen Project-enabled operating systems:
+    - Xen Project-enabled kernel is needed by Dom0
+    - Paravirtualized guests require a PV-enabled guest (???)
+    - Equal orhigher Linux 3.0 versions are Xen Project-enabled and usually include packages that contain the hypervisor and Tools (the default Toolstack and Console)
+    - All but legacy Linux kernels older than Linux 2.6.24 are PV-enabled, capable of running PV guests
+
+- [Xen Project Release Features](https://wiki.xenproject.org/wiki/Xen_Project_Release_Features)
+- [Xen Project-Enabled operating systems](https://wiki.xenproject.org/wiki/Dom0_Kernels_for_Xen)
+
+## Guest Types
+- ARM hosts: One guest type
+- x86 hosts (hypervisor supports): 
+    - **Paravirtualized Guests or PV Guests**:
+        - Introduced by Xen Project.
+        - **No** need for virtualization extensions from the host CPU.
+        - Needs Xen-aware guest operating systems.
+        - PV guests are primarily of use for legacy HW and legacy guest images and in special scenarios, e.g. special guest types, special workloads (e.g. Unikernels), running Xen within another hypervisor without using nested hardware virtualization support, as container host
+    - **HVM Guests**: 
+        - 
 
 ## Resources
 
