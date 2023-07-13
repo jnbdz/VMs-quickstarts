@@ -92,6 +92,12 @@
     - **HVM Guests**: 
         - 
 
+## Debian Notes
+```bash
+sudo /usr/bin/xenstore-ls
+sudo /usr/sbin/xl
+```
+
 ## Resources
 
 ## Credits
